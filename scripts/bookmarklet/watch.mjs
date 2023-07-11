@@ -19,7 +19,7 @@ const bookmarklet = `(function () {
   "use strict";
 
   const script = document.createElement("script");
-  script.src = "http://localhost:${port}/content.js";
+  script.src = "http://localhost:${port}/contents.js";
   script.async = true;
   script.defer = true;
   document.body.append(script);

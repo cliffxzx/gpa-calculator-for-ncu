@@ -1,6 +1,36 @@
-# Browser Extension Starter and Userscript Starter
+<img alt="Parcel" src="./assets/enabled.png" width="100">
+
+## 國立中央大學 GPA 計算機 GPA Calculator for NCU
+
+![](./docs/screenshot.png)
+
+As the Score system has been migrated to the new system, the old GPA calculators are no longer functional. This extension serves as a replacement for the old calculators. It is currently undergoing rapid development and may contain some bugs. If you come across any bugs, please report them. We highly encourage you to submit a pull request for any new features. Thank you!
+
+由於舊的 GPA 計算機擴充功能因為成績系統的改版而失效，因此開發了這個新的擴充功能來取代舊的計算機。目前這個擴充功能還在快速開發中，可能會有一些 bug。我們也非常歡迎你提交新功能的 pull request。如果你覺得這個擴充功能對你有幫助，也請給我們一顆星星。謝謝！
+
+| Platform | Userscript | Google Chrome | Firefox | Microsoft Edge |
+| -------- | ---------- | ------------- | ------- | -------------- |
+| Install  |            |               |         |                |
 
 ## Features
+
+- ⌨️ 2 metrics x 3 range options = [GPA4, GPA4.3] X [Overall, Last 60, Required]
+
+## Disclaimer
+
+This extension is for estimation only, and is not responsible for any loss or damage.
+
+此擴充功能僅提供概估 GPA 分數，不負任何損失責任。
+
+## Credits
+
+- [Browser Extension Starter](https://github.com/utags/browser-extension-starter)
+
+## Developer Guideline
+
+### Browser Extension Starter and Userscript Starter
+
+#### Features
 
 - One codebase for Chrome extesions, Firefox addons, Userscripts, Bookmarklets and simple JavaScript modules
 - Live-reload and React HMR
@@ -11,12 +41,12 @@
 - [Prettier](https://github.com/prettier/prettier) - Code Formatter
 - [XO](https://github.com/xojs/xo) - JavaScript/TypeScript linter
 
-## Showcases
+#### Showcases
 
 - [UTags - Add usertags to links](https://github.com/utags/utags) - Allow users to add custom tags to links.
 - [Hacker News Apps Switcher](https://github.com/dev-topics-only/hacker-news-apps-switcher) - Open Hacker News links on the favorite apps
 
-## How To Make A New Extension
+#### How To Make A New Extension
 
 1. Fork [this starter repo](https://github.com/utags/browser-extension-starter), and rename repo to your extension name
 
@@ -26,17 +56,17 @@
 
 ```bash
 pnpm install
-# or
+### or
 npm install
 ```
 
-## Getting Started
+#### Getting Started
 
 First, run the development server:
 
 ```bash
 pnpm dev
-# or
+### or
 npm run dev
 ```
 
@@ -46,27 +76,27 @@ You can start editing the popup by modifying `popup.tsx`. It should auto-update 
 
 For further guidance, [visit our Documentation](https://docs.plasmo.com/)
 
-## Making production build
+#### Making production build
 
 Run the following:
 
 ```bash
 pnpm build
-# or
+### or
 npm run build
 ```
 
 This should create a production bundle for your extension, ready to be zipped and published to the stores.
 
-## Submit to the webstores
+#### Submit to the webstores
 
 The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
 
-## License
+#### License
 
 Copyright (c) 2023 [Pipecraft](https://www.pipecraft.net). Licensed under the [MIT License](LICENSE).
 
-## >\_
+#### >\_
 
 [![Pipecraft](https://img.shields.io/badge/site-pipecraft-brightgreen)](https://www.pipecraft.net)
 [![UTags](https://img.shields.io/badge/site-UTags-brightgreen)](https://utags.pipecraft.net)

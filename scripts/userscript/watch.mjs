@@ -14,7 +14,7 @@ buildOptions.alias = {
 
 const { port } = await runDevServer(buildOptions, target, tag)
 
-const text = fs.readFileSync(`build/${target}-${tag}/content.js`, "utf8")
+const text = fs.readFileSync(`build/${target}-${tag}/contents.js`, "utf8")
 // Get all userscript GM_* and GM.* functions
 const matched = new Set()
 text.replace(/(GM[_.]\w+)/gm, (match) => {
@@ -54,7 +54,7 @@ ${apiExports}
   }
 
   const script = document.createElement("script");
-  script.src = "http://localhost:${port}/content.js";
+  script.src = "http://localhost:${port}/contents.js";
   document.body.append(script);
 
   new EventSource("http://localhost:${port}/esbuild").addEventListener(

@@ -1,18 +1,16 @@
 {
-  "name": "my-extension",
-  "displayName": "My-Extension",
-  "displayName:zh-CN": "我的扩展",
+  "name": "gpa-calculator-for-ncu",
+  "displayName": "GPA Calculator for NCU",
+  "displayName:zh-CN": "國立中央大學 GPA 計算機",
   "version": "0.1.0",
-  "description": "try to take over the world!",
-  "description:zh-CN": "让世界更美好！",
-  "author": "You",
-  "namespace": "https://github.com/utags/browser-extension-starter",
-  "icon": "https://www.tampermonkey.net/favicon.ico",
+  "description": "",
+  "description:zh-CN": "",
+  "author": "cliffxzx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/utags/browser-extension-starter/issues"
+    "url": "https://github.com/cliffxzx/gpa-calculator-for-ncu/issues"
   },
-  "homepage": "https://github.com/utags/browser-extension-starter#readme",
+  "homepage": "https://github.com/cliffxzx/gpa-calculator-for-ncu#readme",
   "scripts": {
     "p": "prettier --write .",
     "lint": "run-s lint:*",
@@ -40,9 +38,10 @@
     "browser-extension-settings": "^0.1.0",
     "browser-extension-storage": "^0.1.2",
     "browser-extension-utils": "^0.1.9",
-    "plasmo": "^0.77.5",
+    "plasmo": "^0.78.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.3"
   },
   "devDependencies": {
     "@plasmohq/prettier-plugin-sort-imports": "^3.6.4",
@@ -61,7 +60,8 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "http://*/*"
     ],
     "permissions": [
       "storage",

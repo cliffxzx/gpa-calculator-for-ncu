@@ -63,9 +63,9 @@ const schemeImportPlugin = ({ compressCss }) => ({
   },
 })
 
-export const getBuildOptions = (target, tag, fileName = "content") => {
+export const getBuildOptions = (target, tag, fileName = "contents") => {
   return {
-    entryPoints: [`src/${fileName}.ts`],
+    entryPoints: [`src/${fileName}`],
     bundle: true,
     plugins: [
       schemeImportPlugin({ compressCss: tag === "prod" || tag === "staging" }),
@@ -74,7 +74,7 @@ export const getBuildOptions = (target, tag, fileName = "content") => {
       "process.env.PLASMO_TARGET": `"${target}"`,
       "process.env.PLASMO_TAG": `"${tag}"`,
     },
-    target: ["chrome58", "firefox57", "safari11", "edge16"],
+    target: ["chrome58", "firefox57", "safari11"],
     outfile: `build/${target}-${tag}/${fileName}.js`,
   }
 }
