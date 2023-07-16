@@ -56,8 +56,6 @@ const grants = [...matched]
   .join("\n")
 text = text.replace("// ==/UserScript==", `${grants}\n// ==/UserScript==`)
 
-// Replace first one to 'use strict'
-text = text.replace("{", '{\n  "use strict";')
 // Remove all commenets staret with '// '
 text = text.replace(/^\s*\/\/ [^=@].*$/gm, "")
 text = text.replace(/\n+/gm, "\n")

@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import icon from "url:../../assets/enabled.png"
 
 import { GPA4 } from "~calculator/gpa4"
 import { GPA43 } from "~calculator/gpa43"

@@ -1,16 +1,53 @@
 <img alt="Parcel" src="./assets/enabled.png" width="100">
 
-## 國立中央大學 GPA 計算機 GPA Calculator for NCU
+# 國立中央大學 GPA 計算機 GPA Calculator for NCU
 
-![](./docs/screenshot.png)
+[![Badge Submit to Web Store]][Submit to Web Store]
+[![Badge Stars]][Stars]
+[![Badge Commit]][Commit]
+[![Badge Issues]][Issues]
+[![Badge PRs Welcome]][PRs Welcome]
+[![Badge License]][License]
 
-As the Score system has been migrated to the new system, the old GPA calculators are no longer functional. This extension serves as a replacement for the old calculators. It is currently undergoing rapid development and may contain some bugs. If you come across any bugs, please report them. We highly encourage you to submit a pull request for any new features. Thank you!
+<img alt="Parcel" src="./docs/screenshot.png" width="600">
 
-由於舊的 GPA 計算機擴充功能因為成績系統的改版而失效，因此開發了這個新的擴充功能來取代舊的計算機。目前這個擴充功能還在快速開發中，可能會有一些 bug。我們也非常歡迎你提交新功能的 pull request。如果你覺得這個擴充功能對你有幫助，也請給我們一顆星星。謝謝！
+<table>
+  <thead>
+    <tr>
+      <th align="center" >Userscript (Recommend)</th>
+      <th align="center" >Google Chrome</th>
+      <th align="center" >Firefox</th>
+      <th align="center" >Microsoft Edge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/cliffxzx/gpa-calculator-for-ncu/raw/main/build/userscript-prod/gpa-calculator-for-ncu.user.js">
+          <img src="https://user-images.githubusercontent.com/33416429/92813512-27f0bb80-f376-11ea-8562-ee2b3e416aec.png" width="150">
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+          <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png">
+        </a>
+      </td>
+      <td align="center" width="140">
+        Coming Soon!
+        <!-- <img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png"> -->
+      </td>
+      <td align="center">
+        <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+          <img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png">
+        </a>
+      </td>
+    </tr>
+  <tbody>
+</table>
 
-| Platform | Userscript | Google Chrome | Firefox | Microsoft Edge |
-| -------- | ---------- | ------------- | ------- | -------------- |
-| Install  |            |               |         |                |
+As the Score system has been migrated to the new one, the old GPA calculators are no longer functional. This extension serves as a replacement for the old calculators. It is currently undergoing rapid development and may contain some bugs. If you come across any bugs, please report them. We highly encourage you to submit a pull request for any new features. Thank you!
+
+由於舊的 GPA 計算機擴充功能因為成績系統的改版而失效，因此開發了這個新的擴充功能來取代舊的計算機。目前這個擴充功能還在快速開發中，可能會有一些 bug。非常歡迎提交新功能的 pull request。如果你覺得這個擴充功能對你有幫助，給一顆星星。謝謝！
 
 ## Features
 
@@ -102,3 +139,25 @@ Copyright (c) 2023 [Pipecraft](https://www.pipecraft.net). Licensed under the [M
 [![UTags](https://img.shields.io/badge/site-UTags-brightgreen)](https://utags.pipecraft.net)
 [![DTO](https://img.shields.io/badge/site-DTO-brightgreen)](https://dto.pipecraft.net)
 [![BestXTools](https://img.shields.io/badge/site-bestxtools-brightgreen)](https://www.bestxtools.com)
+
+<!----------------------------------[ Links ]--------------------------------->
+
+[Submit to Web Store]: https://github.com/cliffxzx/gpa-calculator-for-ncu/actions/workflows/submit.yml/badge.svg?branch=main
+[PRs Welcome]: https://github.com/cliffxzx/gpa-calculator-for-ncu/compare
+[Stars]: https://github.com/cliffxzx/gpa-calculator-for-ncu/stargazers
+[Commit]: https://github.com/cliffxzx/gpa-calculator-for-ncu/commits/main
+[Issues]: https://github.com/cliffxzx/gpa-calculator-for-ncu/issues
+[License]: https://github.com/cliffxzx/gpa-calculator-for-ncu/blob/main/LICENSE
+
+<!----------------------------------[ Badges ]--------------------------------->
+
+[Badge Submit to Web Store]: https://github.com/cliffxzx/gpa-calculator-for-ncu/actions/workflows/submit.yml/badge.svg?branch=main
+[Badge PRs Welcome]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+[Badge Stars]: https://img.shields.io/github/stars/cliffxzx/gpa-calculator-for-ncu
+[Badge Commit]: https://img.shields.io/github/commit-activity/m/cliffxzx/gpa-calculator-for-ncu?label=Commits
+[Badge Issues]: https://img.shields.io/github/issues/cliffxzx/gpa-calculator-for-ncu
+[Badge License]: https://img.shields.io/github/license/cliffxzx/gpa-calculator-for-ncu
+[Badge Chrome]: https://img.shields.io/chrome-web-store/rating/icfdhijcdkomkgibcbjbmenjkcfalljj?label=Chrome
+
+[Badge Mozilla]: https://img.shields.io/amo/rating/[name-of-ext]?label=Firefox
+[Badge Edge]: https://img.shields.io/badge/dynamic/json?label=Edge&color=brightgreen&query=%24.averageRating&suffix=%2F%35&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2F[ext-id]
