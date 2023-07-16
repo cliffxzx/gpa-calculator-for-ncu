@@ -90,3 +90,6 @@ const interactiveCheckboxFactory = (
   checkbox.addEventListener("click", (e) => e.stopPropagation())
   return checkbox
 }
+
+// prevent rendering from plasmo csui
+export const render = () => {}

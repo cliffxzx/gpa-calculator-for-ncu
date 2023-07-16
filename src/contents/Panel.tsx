@@ -69,6 +69,7 @@ const TabContainer = styled.div`
       0 6px 12px 0 rgba(24, 94, 224, 0.15);
     padding: 5px;
     border-radius: 99px;
+    user-select: none;
   }
 
   .tab-box * {
@@ -181,21 +182,21 @@ export const Panel = ({ courses, selectedIDs }: PanelProps) => {
           }}>
           <Point
             val={calculator(selectedCourse)}
-            fullVal={calculator === GPA4 ? 4 : 4.3}
+            fullval={calculator === GPA4 ? 4 : 4.3}
             title="Overall"
             size={70}
             color={["#e67e22", "#f1c40f"]}
           />
           <Point
             val={calculator(last60Courses)}
-            fullVal={calculator === GPA4 ? 4 : 4.3}
+            fullval={calculator === GPA4 ? 4 : 4.3}
             title="Last 60"
             size={60}
             color={["#2ecc71", "#1abc9c"]}
           />
           <Point
             val={calculator(requiredCourses)}
-            fullVal={calculator === GPA4 ? 4 : 4.3}
+            fullval={calculator === GPA4 ? 4 : 4.3}
             title="Required"
             size={65}
             color={["#c0392b", "#e74c3c"]}
@@ -230,3 +231,6 @@ export const Panel = ({ courses, selectedIDs }: PanelProps) => {
     </div>
   )
 }
+
+// prevent rendering from plasmo csui
+export const render = () => {}

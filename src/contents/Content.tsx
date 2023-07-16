@@ -70,3 +70,6 @@ export const Content = () => {
     </>
   )
 }
+
+// prevent rendering from plasmo csui
+export const render = () => {}

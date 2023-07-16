@@ -11,7 +11,7 @@ const Circle = styled.div`
 const Svg = styled.svg<{
   size: number
   val: number
-  fullVal: number
+  fullval: number
   color: [number, number]
 }>`
   position: relative;
@@ -27,7 +27,7 @@ const Svg = styled.svg<{
     transform: translate(5px, 5px);
     stroke-dasharray: 440px;
     stroke-dashoffset: ${(props) =>
-      440 - (170 + props.size / 6) * (props.val / props.fullVal)}px;
+      440 - (170 + props.size / 6) * (props.val / props.fullval)}px;
     transition: stroke-dashoffset 0.35s;
   }
 
@@ -81,12 +81,12 @@ const Subtitle = styled.div`
   letter-spacing: 1px;
 `
 
-export const Point = ({ val, fullVal, title, size, color }) => {
+export const Point = ({ val, fullval, title, size, color }) => {
   const cr = size / 2 - 5
   return (
     <Circle>
       <div style={{ display: "inline-block", position: "relative" }}>
-        <Svg size={size} val={val} fullVal={fullVal} color={color}>
+        <Svg size={size} val={val} fullval={fullval} color={color}>
           <circle cx={cr} cy={cr} r={cr}></circle>
           <circle cx={cr} cy={cr} r={cr}></circle>
           <defs>
@@ -102,3 +102,6 @@ export const Point = ({ val, fullVal, title, size, color }) => {
     </Circle>
   )
 }
+
+// prevent rendering from plasmo csui
+export const render = () => {}

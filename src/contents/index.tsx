@@ -6,7 +6,7 @@ import { createRoot } from "react-dom/client"
 import { Content } from "./Content"
 
 export const config: PlasmoCSConfig = {
-  matches: ["https://cis.ncu.edu.tw/iNCU/academic/register/transcriptQuery"],
+  matches: ["<all_urls>"],
   all_frames: true,
 }
 
@@ -26,3 +26,6 @@ async function main() {
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises, unicorn/prefer-top-level-await
 main()
+
+// prevent rendering from plasmo csui
+export const render = () => {}
