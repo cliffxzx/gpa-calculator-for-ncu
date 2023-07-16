@@ -7,6 +7,7 @@
   "description:zh-CN": "",
   "author": "cliffxzx",
   "license": "MIT",
+  "icon": "https://github.com/cliffxzx/gpa-calculator-for-ncu/blob/main/assets/enabled.png?raw=true",
   "bugs": {
     "url": "https://github.com/cliffxzx/gpa-calculator-for-ncu/issues"
   },
@@ -35,37 +36,35 @@
     "package:firefox": "plasmo package --target=firefox-mv2"
   },
   "dependencies": {
-    "browser-extension-settings": "^0.1.0",
-    "browser-extension-storage": "^0.1.2",
-    "browser-extension-utils": "^0.1.9",
-    "plasmo": "^0.78.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.0.3"
+    "browser-extension-settings": "0.2.5",
+    "browser-extension-storage": "0.1.2",
+    "browser-extension-utils": "0.1.10",
+    "plasmo": "0.80.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "peerDependencies": {
+    "styled-components": "6.0.4"
   },
   "devDependencies": {
-    "@plasmohq/prettier-plugin-sort-imports": "^3.6.4",
-    "@types/chrome": "^0.0.240",
-    "@types/node": "^20.4.0",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "bookmarkleter": "^1.1.0",
-    "esbuild": "^0.18.11",
-    "http-server": "^14.1.1",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.8",
-    "sass": "^1.63.6",
-    "typescript": "^5.1.6",
-    "xo": "^0.54.2"
+    "@plasmohq/prettier-plugin-sort-imports": "4.0.1",
+    "@types/chrome": "0.0.241",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "bookmarkleter": "1.1.0",
+    "esbuild": "0.18.13",
+    "http-server": "14.1.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "3.0.0",
+    "sass": "1.63.6",
+    "typescript": "5.1.6",
+    "xo": "0.55.0"
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*",
-      "http://*/*"
-    ],
-    "permissions": [
-      "storage",
-      "tabs"
+      "https://cis.ncu.edu.tw/iNCU/academic/register/transcriptQuery",
+      "https://portal.ncu.edu.tw/system/162"
     ]
   },
   "xo": {
