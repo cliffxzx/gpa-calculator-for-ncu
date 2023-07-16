@@ -50,7 +50,7 @@
 
 As the Score system has been migrated to the new one, the old GPA calculators are no longer functional. This extension serves as a replacement for the old calculators. It is currently undergoing rapid development and may contain some bugs. If you come across any bugs, please report them. We highly encourage you to submit a pull request for any new features. Thank you!
 
-由於舊的 GPA 計算機擴充功能因為成績系統的改版而失效，因此開發了這個新的擴充功能來取代舊的計算機。目前這個擴充功能還在快速開發中，可能會有一些 bug。非常歡迎提交新功能的 pull request。如果你覺得這個擴充功能對你有幫助，給一顆星星。謝謝！
+由於舊的 GPA 計算機擴充功能因為成績系統的改版而失效，因此開發了這個新的擴充功能來取代舊的計算機。目前這個擴充功能還在快速開發中，可能會有一些 bug。我們也非常歡迎你提交新功能的 pull request。如果你覺得這個擴充功能對你有幫助，給一顆星星。謝謝！
 
 ## Features
 
