@@ -27,19 +27,22 @@
           <img src="https://user-images.githubusercontent.com/33416429/92813512-27f0bb80-f376-11ea-8562-ee2b3e416aec.png" width="150">
         </a>
       </td>
-      <td align="center">
-        <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+      <td align="center" width="140">
+        Coming Soon!
+        <!-- <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
           <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png">
+        </a> -->
+      </td>
+      <td align="center">
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/gpa-calculator-for-ncu">
+          <img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png">
         </a>
       </td>
       <td align="center" width="140">
         Coming Soon!
-        <!-- <img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png"> -->
-      </td>
-      <td align="center">
-        <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+        <!-- <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
           <img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png">
-        </a>
+        </a> -->
       </td>
     </tr>
   <tbody>
