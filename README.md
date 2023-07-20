@@ -28,10 +28,9 @@
         </a>
       </td>
       <td align="center" width="140">
-        Coming Soon!
-        <!-- <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+        <a href="https://chrome.google.com/webstore/detail/gpa-calculator-for-ncu/icfdhijcdkomkgibcbjbmenjkcfalljj">
           <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png">
-        </a> -->
+        </a>
       </td>
       <td align="center">
         <a href="https://addons.mozilla.org/en-US/firefox/addon/gpa-calculator-for-ncu">
