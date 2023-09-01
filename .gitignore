@@ -45,3 +45,8 @@ tsconfig.tsbuildinfo
 !build/userscript-prod
 build/userscript-prod/*
 !build/userscript-prod/gpa-calculator-for-ncu.user.js
+
+# firefox manual prod
+!build/firefox-mv2-prod
+build/firefox-mv2-prod/*
+!build/firefox-mv2-prod/web-ext-artifacts

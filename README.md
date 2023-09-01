@@ -35,6 +35,8 @@
         <a href="https://addons.mozilla.org/en-US/firefox/addon/gpa-calculator-for-ncu">
           <img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png">
         </a>
+        <br />
+        <a href="https://github.com/cliffxzx/gpa-calculator-for-ncu/raw/main/build/firefox-mv2-prod/web-ext-artifacts/gpa_calculator_for_ncu-0.1.1.3.xpi">Manual Install</a>
       </td>
       <!-- <td align="center" width="140">
         <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
