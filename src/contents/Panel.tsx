@@ -23,7 +23,9 @@ const Card = styled.div`
   z-index: 1;
   background-color: #2c6fd1;
   background-image: linear-gradient(135deg, #21bbfe, #2c6fd1);
-  box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #2c6fd1;
+  box-shadow:
+    20px 20px 60px rgba(34, 50, 84, 0.5),
+    1px 1px 0px 1px #2c6fd1;
 
   display: flex;
   flex-direction: column;
@@ -66,7 +68,8 @@ const TabContainer = styled.div`
     display: flex;
     position: relative;
     background-color: #fff;
-    box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15),
+    box-shadow:
+      0 0 1px 0 rgba(24, 94, 224, 0.15),
       0 6px 12px 0 rgba(24, 94, 224, 0.15);
     padding: 5px;
     border-radius: 99px;
@@ -180,26 +183,27 @@ export const Panel = ({ courses, selectedIDs }: PanelProps) => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            margin: "20px 0 0 0",
           }}>
           <Point
             val={calculator(selectedCourse)}
             fullval={calculator === GPA4 ? 4 : 4.3}
             title="Overall"
-            size={70}
+            size={37}
             color={["#e67e22", "#f1c40f"]}
           />
           <Point
             val={calculator(last60Courses)}
             fullval={calculator === GPA4 ? 4 : 4.3}
             title="Last 60"
-            size={60}
+            size={28}
             color={["#2ecc71", "#1abc9c"]}
           />
           <Point
             val={calculator(requiredCourses)}
             fullval={calculator === GPA4 ? 4 : 4.3}
             title="Required"
-            size={65}
+            size={32}
             color={["#c0392b", "#e74c3c"]}
           />
         </div>

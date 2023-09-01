@@ -4,7 +4,7 @@
 // @namespace            undefined
 // @homepageURL          https://github.com/cliffxzx/gpa-calculator-for-ncu#readme
 // @supportURL           https://github.com/cliffxzx/gpa-calculator-for-ncu/issues
-// @version              0.1.0
+// @version              0.1.1
 // @description
 // @description:zh-CN
 // @icon                 https://github.com/cliffxzx/gpa-calculator-for-ncu/blob/main/assets/enabled.png?raw=true
@@ -33045,33 +33045,37 @@
       ]))
   )
   var _b
-  var Svg = st.svg(
+  var ClipCircle = st.svg(
     _b ||
       (_b = __template([
         "\n  position: relative;\n  width: ",
         "px;\n  height: ",
-        "px;\n\n  circle {\n    width: ",
-        "px;\n    height: ",
-        "px;\n    fill: none;\n    stroke-width: 5;\n    stroke: #000;\n    transform: translate(5px, 5px);\n    stroke-dasharray: 440px;\n    stroke-dashoffset: ",
-        "px;\n    transition: stroke-dashoffset 0.35s;\n  }\n\n  circle:nth-child(1) {\n    stroke-dashoffset: 0;\n    stroke: #f3f3f3;\n  }\n\n  circle:nth-child(2) {\n    stroke-linecap: round;\n    stroke: linear-gradient(\n      180deg,\n      ",
-        " 0%,\n      ",
-        ' 100%\n    );\n    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);\n    transform: rotate(-90deg) translate(5px, 5px);\n    transform-origin: 50% 50%;\n    stroke: url("#',
+        "px;\n  overflow: visible;\n\n  circle {\n    stroke: #000;\n    stroke-width: 5;\n    fill: none;\n    stroke-dasharray: ",
+        "\n      ",
+        ";\n    transition: stroke-dashoffset 0.35s;\n    transform-origin: 50% 50%;\n  }\n\n  circle:nth-child(1) {\n    stroke: #f3f3f3;\n    transform: scaleX(-1) rotate(-90deg);\n  }\n\n  circle:nth-child(2) {\n    stroke-linecap: round;\n    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);\n    transform: scaleX(-1)\n      rotate(",
+        "deg);\n    stroke-dasharray: ",
+        "\n      ",
+        ';\n    stroke: url("#grad-',
+        "-",
         '");\n  }\n',
       ])),
-    (props) => props.size,
-    (props) => props.size,
-    (props) => props.size,
-    (props) => props.size,
-    (props) => 440 - (170 + props.size / 6) * (props.val / props.fullval),
+    (props) => props.size * 2 + 5,
+    (props) => props.size / 2,
+    (props) => (2 * Math.PI * props.size) / 4,
+    (props) => (2 * Math.PI * props.size) / 2,
+    (props) => 180 + ((100 - props.percent) * 180) / 100,
+    (props) =>
+      (2 * Math.PI * props.size) / 2 -
+      ((100 - props.percent) * (2 * Math.PI * props.size)) / 2 / 100,
+    (props) => 2 * Math.PI * props.size,
     (props) => props.color[0],
-    (props) => props.color[1],
-    (props) => "grad-".concat(props.color[0], "-").concat(props.color[1])
+    (props) => props.color[1]
   )
   var _c
   var Number2 = st.div(
     _c ||
       (_c = __template([
-        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-family: Iter;\n  font-weight: 800;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 14px;\n  background-color: #0074e0;\n  background-size: 100%;\n  background-repeat: repeat;\n  background-clip: text;\n  background-image: linear-gradient(45deg, #fff 0%, #fff 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  -moz-background-clip: text;\n  -moz-text-fill-color: transparent;\n",
+        "\n  position: absolute;\n  bottom: 12px;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-family: Iter;\n  font-weight: 800;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 14px;\n  background-color: #0074e0;\n  background-size: 100%;\n  background-repeat: repeat;\n  background-clip: text;\n  background-image: linear-gradient(45deg, #fff 0%, #fff 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  -moz-background-clip: text;\n  -moz-text-fill-color: transparent;\n",
       ]))
   )
   var _d
@@ -33082,47 +33086,42 @@
       ]))
   )
   var Point = ({ val, fullval, title, size, color }) => {
-    const cr = size / 2 - 5
     return /* @__PURE__ */ React2.createElement(
       Circle,
       null,
       /* @__PURE__ */ React2.createElement(
-        "div",
-        { style: { display: "inline-block", position: "relative" } },
+        ClipCircle,
+        { size, percent: (val / fullval) * 100, color },
+        /* @__PURE__ */ React2.createElement("circle", {
+          cx: "50%",
+          cy: "50%",
+          r: size,
+        }),
+        /* @__PURE__ */ React2.createElement("circle", {
+          cx: "50%",
+          cy: "50%",
+          r: size,
+        }),
         /* @__PURE__ */ React2.createElement(
-          Svg,
-          { size, val, fullval, color },
-          /* @__PURE__ */ React2.createElement("circle", {
-            cx: cr,
-            cy: cr,
-            r: cr,
-          }),
-          /* @__PURE__ */ React2.createElement("circle", {
-            cx: cr,
-            cy: cr,
-            r: cr,
-          }),
+          "defs",
+          null,
           /* @__PURE__ */ React2.createElement(
-            "defs",
-            null,
-            /* @__PURE__ */ React2.createElement(
-              "linearGradient",
-              { id: "grad-".concat(color[0], "-").concat(color[1]) },
-              /* @__PURE__ */ React2.createElement("stop", {
-                id: "stop1",
-                offset: "0%",
-                stopColor: color[0],
-              }),
-              /* @__PURE__ */ React2.createElement("stop", {
-                id: "stop2",
-                offset: "100%",
-                stopColor: color[1],
-              })
-            )
+            "linearGradient",
+            { id: "grad-".concat(color[0], "-").concat(color[1]) },
+            /* @__PURE__ */ React2.createElement("stop", {
+              id: "stop1",
+              offset: "0%",
+              stopColor: color[0],
+            }),
+            /* @__PURE__ */ React2.createElement("stop", {
+              id: "stop2",
+              offset: "100%",
+              stopColor: color[1],
+            })
           )
-        ),
-        /* @__PURE__ */ React2.createElement(Number2, { color }, val.toFixed(3))
+        )
       ),
+      /* @__PURE__ */ React2.createElement(Number2, { color }, val.toFixed(3)),
       /* @__PURE__ */ React2.createElement(Subtitle, null, title)
     )
   }
@@ -33130,14 +33129,14 @@
   var Card = st.div(
     _a2 ||
       (_a2 = __template([
-        '\n  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");\n\n  font-family: Inter;\n  position: relative;\n  width: 250px;\n  height: 150px;\n  border-radius: 12px;\n  color: #fff;\n  transform: rotateX(1deg) rotateY(-2deg) rotate(1deg);\n  transition: all 0.2s ease;\n  overflow: hidden;\n\n  z-index: 1;\n  background-color: #2c6fd1;\n  background-image: linear-gradient(135deg, #21bbfe, #2c6fd1);\n  box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #2c6fd1;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n\n  &::after {\n    position: absolute;\n    top: -70px;\n    left: 0;\n    content: "";\n    width: 200%;\n    height: 200%;\n    background-image: linear-gradient(\n      60deg,\n      rgba(255, 255, 255, 0) 20%,\n      rgba(255, 255, 255, 0.1),\n      rgba(255, 255, 255, 0) 80%\n    );\n    transform: translateX(-100%);\n  }\n\n  &:hover {\n    transform: rotateX(2deg) rotateY(-15deg) rotate(5deg);\n    &::after {\n      transform: translateX(100%);\n      transition: all 0.7s ease-in-out;\n    }\n  }\n',
+        '\n  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");\n\n  font-family: Inter;\n  position: relative;\n  width: 250px;\n  height: 150px;\n  border-radius: 12px;\n  color: #fff;\n  transform: rotateX(1deg) rotateY(-2deg) rotate(1deg);\n  transition: all 0.2s ease;\n  overflow: hidden;\n\n  z-index: 1;\n  background-color: #2c6fd1;\n  background-image: linear-gradient(135deg, #21bbfe, #2c6fd1);\n  box-shadow:\n    20px 20px 60px rgba(34, 50, 84, 0.5),\n    1px 1px 0px 1px #2c6fd1;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n\n  &::after {\n    position: absolute;\n    top: -70px;\n    left: 0;\n    content: "";\n    width: 200%;\n    height: 200%;\n    background-image: linear-gradient(\n      60deg,\n      rgba(255, 255, 255, 0) 20%,\n      rgba(255, 255, 255, 0.1),\n      rgba(255, 255, 255, 0) 80%\n    );\n    transform: translateX(-100%);\n  }\n\n  &:hover {\n    transform: rotateX(2deg) rotateY(-15deg) rotate(5deg);\n    &::after {\n      transform: translateX(100%);\n      transition: all 0.7s ease-in-out;\n    }\n  }\n',
       ]))
   )
   var _b2
   var TabContainer = st.div(
     _b2 ||
       (_b2 = __template([
-        '\n  --primary-color: #185ee0;\n  --secondary-color: #e6eef9;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  .tab-box {\n    display: flex;\n    position: relative;\n    background-color: #fff;\n    box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15),\n      0 6px 12px 0 rgba(24, 94, 224, 0.15);\n    padding: 5px;\n    border-radius: 99px;\n    user-select: none;\n  }\n\n  .tab-box * {\n    z-index: 2;\n  }\n\n  .tab {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 22px;\n    width: 70px;\n    font-size: 0.8rem;\n    font-weight: 500;\n    border-radius: 99px;\n    cursor: pointer;\n    transition: color 0.15s ease-in;\n    margin-bottom: 0;\n    color: #000;\n  }\n\n  input[type="radio"] {\n    display: none;\n  }\n\n  input[type="radio"]:checked + label {\n    color: var(--primary-color);\n  }\n  input[type="radio"]:checked + label > .notificationx {\n    background-color: var(--primary-color);\n    color: #fff;\n  }\n\n  input[id="radio-1"]:checked ~ .glider {\n    transform: translateX(0);\n  }\n\n  input[id="radio-2"]:checked ~ .glider {\n    transform: translateX(100%);\n  }\n\n  input[id="radio-3"]:checked ~ .glider {\n    transform: translateX(200%);\n  }\n\n  .glider {\n    position: absolute;\n    display: flex;\n    height: 22px;\n    width: 70px;\n    background-color: var(--secondary-color);\n    z-index: 1;\n    border-radius: 99px;\n    transition: 0.25s ease-out;\n  }\n',
+        '\n  --primary-color: #185ee0;\n  --secondary-color: #e6eef9;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  .tab-box {\n    display: flex;\n    position: relative;\n    background-color: #fff;\n    box-shadow:\n      0 0 1px 0 rgba(24, 94, 224, 0.15),\n      0 6px 12px 0 rgba(24, 94, 224, 0.15);\n    padding: 5px;\n    border-radius: 99px;\n    user-select: none;\n  }\n\n  .tab-box * {\n    z-index: 2;\n  }\n\n  .tab {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 22px;\n    width: 70px;\n    font-size: 0.8rem;\n    font-weight: 500;\n    border-radius: 99px;\n    cursor: pointer;\n    transition: color 0.15s ease-in;\n    margin-bottom: 0;\n    color: #000;\n  }\n\n  input[type="radio"] {\n    display: none;\n  }\n\n  input[type="radio"]:checked + label {\n    color: var(--primary-color);\n  }\n  input[type="radio"]:checked + label > .notificationx {\n    background-color: var(--primary-color);\n    color: #fff;\n  }\n\n  input[id="radio-1"]:checked ~ .glider {\n    transform: translateX(0);\n  }\n\n  input[id="radio-2"]:checked ~ .glider {\n    transform: translateX(100%);\n  }\n\n  input[id="radio-3"]:checked ~ .glider {\n    transform: translateX(200%);\n  }\n\n  .glider {\n    position: absolute;\n    display: flex;\n    height: 22px;\n    width: 70px;\n    background-color: var(--secondary-color);\n    z-index: 1;\n    border-radius: 99px;\n    transition: 0.25s ease-out;\n  }\n',
       ]))
   )
   var Panel = ({ courses, selectedIDs }) => {
@@ -33188,27 +33187,28 @@
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              margin: "20px 0 0 0",
             },
           },
           /* @__PURE__ */ React3.createElement(Point, {
             val: calculator(selectedCourse),
             fullval: calculator === GPA4 ? 4 : 4.3,
             title: "Overall",
-            size: 70,
+            size: 37,
             color: ["#e67e22", "#f1c40f"],
           }),
           /* @__PURE__ */ React3.createElement(Point, {
             val: calculator(last60Courses),
             fullval: calculator === GPA4 ? 4 : 4.3,
             title: "Last 60",
-            size: 60,
+            size: 28,
             color: ["#2ecc71", "#1abc9c"],
           }),
           /* @__PURE__ */ React3.createElement(Point, {
             val: calculator(requiredCourses),
             fullval: calculator === GPA4 ? 4 : 4.3,
             title: "Required",
-            size: 65,
+            size: 32,
             color: ["#c0392b", "#e74c3c"],
           })
         ),

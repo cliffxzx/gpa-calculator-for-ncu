@@ -15,9 +15,8 @@
   <thead>
     <tr>
       <th align="center" >Userscript (Recommend)</th>
-      <th align="center" >Google Chrome</th>
+      <th align="center" >Google Chrome / Microsoft Edge</th>
       <th align="center" >Firefox</th>
-      <th align="center" >Microsoft Edge</th>
     </tr>
   </thead>
   <tbody>
@@ -27,7 +26,7 @@
           <img src="https://user-images.githubusercontent.com/33416429/92813512-27f0bb80-f376-11ea-8562-ee2b3e416aec.png" width="150">
         </a>
       </td>
-      <td align="center" width="140">
+      <td align="center" width="300">
         <a href="https://chrome.google.com/webstore/detail/gpa-calculator-for-ncu/icfdhijcdkomkgibcbjbmenjkcfalljj">
           <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png">
         </a>
@@ -37,12 +36,11 @@
           <img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png">
         </a>
       </td>
-      <td align="center" width="140">
-        Coming Soon!
-        <!-- <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
+      <!-- <td align="center" width="140">
+        <a href="https://chrome.google.com/webstore/detail/icfdhijcdkomkgibcbjbmenjkcfalljj">
           <img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png">
-        </a> -->
-      </td>
+        </a>
+      </td> -->
     </tr>
   <tbody>
 </table>

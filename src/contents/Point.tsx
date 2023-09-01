@@ -8,51 +8,48 @@ const Circle = styled.div`
   display: inline-block;
 `
 
-const Svg = styled.svg<{
+const ClipCircle = styled.svg<{
   size: number
-  val: number
-  fullval: number
+  percent: number
   color: [number, number]
 }>`
   position: relative;
-  width: ${(props) => props.size}px;
-  height: ${(props) => props.size}px;
+  width: ${(props) => props.size * 2 + 5}px;
+  height: ${(props) => props.size / 2}px;
+  overflow: visible;
 
   circle {
-    width: ${(props) => props.size}px;
-    height: ${(props) => props.size}px;
-    fill: none;
-    stroke-width: 5;
     stroke: #000;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 440px;
-    stroke-dashoffset: ${(props) =>
-      440 - (170 + props.size / 6) * (props.val / props.fullval)}px;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: ${(props) => (2 * Math.PI * props.size) / 4}
+      ${(props) => (2 * Math.PI * props.size) / 2};
     transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
   }
 
   circle:nth-child(1) {
-    stroke-dashoffset: 0;
     stroke: #f3f3f3;
+    transform: scaleX(-1) rotate(-90deg);
   }
 
   circle:nth-child(2) {
     stroke-linecap: round;
-    stroke: linear-gradient(
-      180deg,
-      ${(props) => props.color[0]} 0%,
-      ${(props) => props.color[1]} 100%
-    );
     box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
-    transform: rotate(-90deg) translate(5px, 5px);
-    transform-origin: 50% 50%;
-    stroke: url("#${(props) => `grad-${props.color[0]}-${props.color[1]}`}");
+    transform: scaleX(-1)
+      rotate(${(props) => 180 + ((100 - props.percent) * 180) / 100}deg);
+    stroke-dasharray: ${(props) =>
+        (2 * Math.PI * props.size) / 2 -
+        ((100 - props.percent) * (2 * Math.PI * props.size)) / 2 / 100}
+      ${(props) => 2 * Math.PI * props.size};
+    stroke: url("#grad-${(props) => props.color[0]}-${(props) =>
+      props.color[1]}");
   }
 `
 
 const Number = styled.div<{ color: [number, number] }>`
   position: absolute;
-  top: 0;
+  bottom: 12px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -82,22 +79,19 @@ const Subtitle = styled.div`
 `
 
 export const Point = ({ val, fullval, title, size, color }) => {
-  const cr = size / 2 - 5
   return (
     <Circle>
-      <div style={{ display: "inline-block", position: "relative" }}>
-        <Svg size={size} val={val} fullval={fullval} color={color}>
-          <circle cx={cr} cy={cr} r={cr}></circle>
-          <circle cx={cr} cy={cr} r={cr}></circle>
-          <defs>
-            <linearGradient id={`grad-${color[0]}-${color[1]}`}>
-              <stop id="stop1" offset="0%" stopColor={color[0]} />
-              <stop id="stop2" offset="100%" stopColor={color[1]} />
-            </linearGradient>
-          </defs>
-        </Svg>
-        <Number color={color}>{val.toFixed(3)}</Number>
-      </div>
+      <ClipCircle size={size} percent={(val / fullval) * 100} color={color}>
+        <circle cx="50%" cy="50%" r={size}></circle>
+        <circle cx="50%" cy="50%" r={size}></circle>
+        <defs>
+          <linearGradient id={`grad-${color[0]}-${color[1]}`}>
+            <stop id="stop1" offset="0%" stopColor={color[0]} />
+            <stop id="stop2" offset="100%" stopColor={color[1]} />
+          </linearGradient>
+        </defs>
+      </ClipCircle>
+      <Number color={color}>{val.toFixed(3)}</Number>
       <Subtitle>{title}</Subtitle>
     </Circle>
   )
